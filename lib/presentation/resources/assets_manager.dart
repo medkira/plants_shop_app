@@ -7,4 +7,10 @@ class ImagesAssets {
   static const String onBoardingImage4 = "$imagePath/oboarding_plant4.png";
 
   static const String arrowRight = "$imagePath/arrow-right.svg";
+  static const String settings = "$imagePath/settings_icon.svg";
+  static const String search = "$imagePath/search_icon.svg";
+  static const String favorite = "$imagePath/favorite_icon.svg";
+  static const String temperature = "$imagePath/temperature_icon.svg";
+  static const String pot = "$imagePath/pot_icon.svg";
+  static const String height = "$imagePath/height_icon.svg";
 }

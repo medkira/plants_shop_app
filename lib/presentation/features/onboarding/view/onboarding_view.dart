@@ -64,6 +64,7 @@ Widget _getContentWidget(OnboardingSliderObject onboardingSliderObject) {
           toolbarHeight: AppSize.s50,
           automaticallyImplyLeading: false,
           actions: <Widget>[
+            // ? skip button
             Container(
               margin: const EdgeInsets.symmetric(horizontal: AppMargin.m18),
               child: TextButton(
@@ -167,12 +168,14 @@ Widget _onBoardingImageAndText(SliderObject sliderObject) {
                       text: AppStrings.onBoardingTitle1,
                       style: Theme.of(context).textTheme.displayLarge!.copyWith(
                           fontWeight: FontWeight.normal,
-                          fontSize: MediaQuery.of(context).size.height / 26)),
+                          fontSize: MediaQuery.of(context).size.height /
+                              AppSize.s26)),
                   TextSpan(
                       text: AppStrings.onBoardingTitle1Blod,
                       style: Theme.of(context).textTheme.displayLarge!.copyWith(
                           fontWeight: FontWeightManager.extraBold,
-                          fontSize: MediaQuery.of(context).size.height / 26))
+                          fontSize:
+                              MediaQuery.of(context).size.height / AppSize.s26))
                 ],
               ),
             )
@@ -180,10 +183,8 @@ Widget _onBoardingImageAndText(SliderObject sliderObject) {
             Text(
               sliderObject.title,
               textAlign: TextAlign.left,
-              style: Theme.of(context)
-                  .textTheme
-                  .displayLarge!
-                  .copyWith(fontSize: MediaQuery.of(context).size.height / 26),
+              style: Theme.of(context).textTheme.displayLarge!.copyWith(
+                  fontSize: MediaQuery.of(context).size.height / AppSize.s26),
             ),
           ]
         ],

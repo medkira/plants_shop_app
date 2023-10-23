@@ -57,9 +57,9 @@ ThemeData getApplicationLightTheme() {
         titleMedium: getMediumStyle(
             color: lightColorScheme.primary, fontSize: FontSize.s18),
         titleSmall: getMediumStyle(
-            color: lightColorScheme.primary, fontSize: FontSize.s18),
+            color: lightColorScheme.onBackground, fontSize: FontSize.s14),
         titleLarge: getMediumStyle(
-            color: lightColorScheme.onSurface, fontSize: FontSize.s18),
+            color: lightColorScheme.onBackground, fontSize: FontSize.s18),
         bodySmall: getMediumStyle(
             color: lightColorScheme.outlineVariant, fontSize: FontSize.s15),
         bodyLarge: getMediumStyle(
@@ -75,29 +75,33 @@ ThemeData getApplicationLightTheme() {
       // ? content padding
       contentPadding: const EdgeInsets.all(AppPadding.p10),
 
+      // ? text field background color
+      filled: true,
+      fillColor: lightColorScheme.primaryContainer,
+
       // ? hint style
       hintStyle: getRegularStyle(
-          color: lightColorScheme.secondary, fontSize: FontSize.s16),
+          color: lightColorScheme.secondary, fontSize: FontSize.s12),
 
       // ? label style
       labelStyle: getMediumStyle(
-          color: lightColorScheme.secondary, fontSize: FontSize.s16),
+          color: lightColorScheme.secondary, fontSize: FontSize.s12),
 
       // ? error style
       errorStyle: getRegularStyle(color: lightColorScheme.error),
 
       // ? enabel border style
       enabledBorder: OutlineInputBorder(
-        borderSide:
-            BorderSide(color: lightColorScheme.secondary, width: AppSize.s1_5),
-        borderRadius: const BorderRadius.all(Radius.circular(AppSize.s18)),
+        borderSide: BorderSide(
+            color: lightColorScheme.primaryContainer, width: AppSize.s1_5),
+        borderRadius: const BorderRadius.all(Radius.circular(AppSize.s12)),
       ),
 
       // ? focused border style
       focusedBorder: OutlineInputBorder(
-        borderSide:
-            BorderSide(color: lightColorScheme.primary, width: AppSize.s1_5),
-        borderRadius: const BorderRadius.all(Radius.circular(AppSize.s18)),
+        borderSide: BorderSide(
+            color: lightColorScheme.primaryContainer, width: AppSize.s1_5),
+        borderRadius: const BorderRadius.all(Radius.circular(AppSize.s12)),
       ),
 
       // ? error border style

@@ -25,6 +25,7 @@ class FontSize {
   static const double s22 = 22;
   static const double s24 = 24;
   static const double s26 = 26;
+  static const double s27 = 27;
   static const double s28 = 28;
   static const double s30 = 30;
   static const double s32 = 32;
