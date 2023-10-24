@@ -88,57 +88,142 @@ Widget _bottomCard(String price) {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Column(
-                  children: [
-                    SizedBox(
-                      width: AppSize.s50,
-                      height: AppSize.s50,
-                      child: SvgPicture.asset(
-                        colorFilter: ColorFilter.mode(
-                            lightColorScheme.background, BlendMode.srcIn),
-                        ImagesAssets.height,
+            SizedBox(
+              height: AppSize.s100,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      SizedBox(
+                        width: AppSize.s48,
+                        height: AppSize.s48,
+                        child: SvgPicture.asset(
+                          colorFilter: ColorFilter.mode(
+                              lightColorScheme.background, BlendMode.srcIn),
+                          ImagesAssets.height,
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    SizedBox(
-                      width: AppSize.s50,
-                      height: AppSize.s50,
-                      child: SvgPicture.asset(
-                        colorFilter: ColorFilter.mode(
-                            lightColorScheme.background, BlendMode.srcIn),
-                        ImagesAssets.temperature,
+                      Text(
+                        "Height",
+                        style: Theme.of(context)
+                            .textTheme
+                            .displayLarge!
+                            .copyWith(
+                                color: Theme.of(context).colorScheme.background,
+                                fontWeight: FontWeight.w600,
+                                fontSize: FontSize.s18),
                       ),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    SizedBox(
-                      width: AppSize.s50,
-                      height: AppSize.s50,
-                      child: SvgPicture.asset(
-                        ImagesAssets.pot,
+                      Text(
+                        "30cm-40cm",
+                        style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                            color: Theme.of(context).colorScheme.background,
+                            fontSize: FontSize.s14),
+                      )
+                    ],
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      SizedBox(
+                        width: AppSize.s48,
+                        height: AppSize.s48,
+                        child: SvgPicture.asset(
+                          colorFilter: ColorFilter.mode(
+                              lightColorScheme.background, BlendMode.srcIn),
+                          ImagesAssets.temperature,
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                      Text(
+                        "Temperature",
+                        style: Theme.of(context)
+                            .textTheme
+                            .displayLarge!
+                            .copyWith(
+                                color: Theme.of(context).colorScheme.background,
+                                fontWeight: FontWeight.w600,
+                                fontSize: FontSize.s18),
+                      ),
+                      Text(
+                        "20°c to 25°c",
+                        style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                            color: Theme.of(context).colorScheme.background,
+                            fontSize: FontSize.s14),
+                      )
+                    ],
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      SizedBox(
+                        width: AppSize.s48,
+                        height: AppSize.s48,
+                        child: SvgPicture.asset(
+                          ImagesAssets.pot,
+                        ),
+                      ),
+                      Text(
+                        "Pot",
+                        style: Theme.of(context)
+                            .textTheme
+                            .displayLarge!
+                            .copyWith(
+                                color: Theme.of(context).colorScheme.background,
+                                fontWeight: FontWeight.w600,
+                                fontSize: FontSize.s18),
+                      ),
+                      Text(
+                        "Ciramic Pot",
+                        style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                            color: Theme.of(context).colorScheme.background,
+                            fontSize: FontSize.s14),
+                      )
+                    ],
+                  ),
+                ],
+              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text(
-                  "Total Price\n\$$price",
-                  style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                      color: Theme.of(context).colorScheme.background,
-                      fontSize: FontSize.s18),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          "Total",
+                          style: Theme.of(context)
+                              .textTheme
+                              .titleSmall!
+                              .copyWith(
+                                  color:
+                                      Theme.of(context).colorScheme.background,
+                                  fontSize: FontSize.s16),
+                        ),
+                        const SizedBox(width: AppSize.s4),
+                        Text(
+                          "Price",
+                          style: Theme.of(context)
+                              .textTheme
+                              .titleSmall!
+                              .copyWith(
+                                  color:
+                                      Theme.of(context).colorScheme.background,
+                                  fontSize: FontSize.s16),
+                        ),
+                      ],
+                    ),
+                    Text(
+                      "\$$price",
+                      style: Theme.of(context).textTheme.displayLarge!.copyWith(
+                          color: Theme.of(context).colorScheme.background,
+                          fontWeight: FontWeight.w900,
+                          fontSize: FontSize.s18),
+                    ),
+                  ],
                 ),
                 ElevatedButton(
                   onPressed: () {},
@@ -146,14 +231,14 @@ Widget _bottomCard(String price) {
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(
-                              AppSize.s30), // Adjust the radius value as needed
+                              AppSize.s28), // Adjust the radius value as needed
                         ),
                       ),
                       backgroundColor: MaterialStateProperty.all<Color>(
                           lightColorScheme.secondaryContainer)),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: AppPadding.p20, vertical: AppPadding.p32),
+                        horizontal: AppPadding.p24, vertical: AppPadding.p32),
                     child: DefaultTextStyle(
                       style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                           color: Theme.of(context).colorScheme.background,

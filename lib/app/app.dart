@@ -25,21 +25,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
-
-// class _MyAppState extends State<MyApp> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return FlutterSizer(builder: (context, orientation, creenType) {
-//       return MaterialApp(
-//         debugShowCheckedModeBanner: false,
-//         initialRoute: Routes.onboarding,
-//         onGenerateRoute: RouteGenerator.getRoute,
-//         theme: getApplicationLightTheme(),
-//         darkTheme: getApplicationDarkTheme(),
-//         themeMode: ThemeMode
-//             .light, // todo add a button to swap between dark and light theme
-//       );
-//     });
-//   }
-// }
